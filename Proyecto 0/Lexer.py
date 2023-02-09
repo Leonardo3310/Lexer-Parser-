@@ -17,7 +17,7 @@ DiccionarioTokens = {
     #PR = Programa Robot
     "VARS" : "V",
     #V = Variables
-    "PROCS" : "DP",,
+    "PROCS" : "DP",
     #DP = Declaracion de procedimiento
     "assignTo" : "CAT",
     #CAT = Comand assignTo
@@ -28,8 +28,7 @@ DiccionarioTokens = {
     "turn" : "CT",
     #CT = Comand turn
     "WHILE" : "WHL",
-    #WHL - Ciclo while
-    "assignTo" : "ASSIGNTO"
+    
     
 
 
