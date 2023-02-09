@@ -62,5 +62,5 @@ def lexer(palabras, diccionario):
 #Finalmente, la función devuelve la lista de tokens.
 
 
-        
+print(open("./Proyecto_0/prueba_archivo.txt").read())
 
