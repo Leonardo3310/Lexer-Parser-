@@ -30,7 +30,8 @@ DiccionarioTokens = {
     "while" : "WHL",
     #WHILE = Ciclo while
     "face" : "CF",
-    
+    #
+
     
     
     
