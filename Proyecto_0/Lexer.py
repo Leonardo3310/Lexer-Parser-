@@ -42,7 +42,7 @@ DiccionarioTokens = {
     "jumpToThe" : "CJTT",
     #CJTT = Comand jumpTothe
     "jumpInDir" : "CJDIR"
-    
+    #CJDIR = Comand jumpInDir
     
     
 
