@@ -4,6 +4,33 @@
 #Documentacion
 """Comentarios por desarrollar"""
 
+"""
+
+Completar dicionario: 
+formato:
+
+PALABRA EN MINUSCULAS = TOKEN 
+
+"""
+DiccionarioTokens = {
+    "ROBOT_R" : "PR",
+    #PR = Programa Robot
+    "VARS" : "V",
+    #V = Variables
+    "PROCS" : "DP"
+    #DP = Declaracion de procedimiento
+    
+
+
+
+
+
+
+
+
+}
+
+
 def leer_archivo(nombre_archivo):
     with open(nombre_archivo, 'r') as archivo:
         contenido = archivo.read()
