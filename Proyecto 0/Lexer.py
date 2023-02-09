@@ -19,9 +19,11 @@ DiccionarioTokens = {
     #V = Variables
     "PROCS" : "DP",
     #DP = Declaracion de procedimiento
-    "WHILE" : "WHL",
-    #WHL - Ciclo while
+    "while" : "WHILE",
+    #WHL = Ciclo while
     "assignTo" : "ASSIGNTO"
+    #assingTo = name donde name es el nombre de una variable y n es un número. 
+    # El resultado de esta instrucción es asignar el valor del número a la variable. 
     
 
 
