@@ -27,7 +27,11 @@ DiccionarioTokens = {
     #CM = Comand move
     "turn" : "CT",
     #CT = Comand turn
-    "WHILE" : "WHL",
+    "while" : "WHL",
+    #WHILE = Ciclo while
+    "face" : "CF",
+    
+    
     
     
 
