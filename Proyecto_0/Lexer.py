@@ -50,8 +50,12 @@ DiccionarioTokens = {
     "then" : "THEN",
     "(" : "POPEN",
     ")" : "PCLOSE",
-
-    
+    ":" : "DOSPUNTOS",
+    ";" : "PYC",
+    "[" : "COPEN",
+    "]" : "CCLOSE",
+    "{" : "KOPEN",
+    "}" : "KCLOSE"    
 
 
 
