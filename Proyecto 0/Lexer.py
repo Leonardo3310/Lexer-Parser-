@@ -17,14 +17,16 @@ DiccionarioTokens = {
     #PR = Programa Robot
     "VARS" : "V",
     #V = Variables
-    "PROCS" : "DP"
+    "PROCS" : "DP",
     #DP = Declaracion de procedimiento
-    
-
-
-
-
-
+    "assignTo" : "CAT",
+    #CAT = Comand assignTo
+    "goto" : "CGT",
+    #CGT = Comand goTo
+    "move" : "CM",
+    #CM = Comand move
+    "turn" : "CT",
+    #CT = Comand turn
 
 
 
@@ -45,7 +47,7 @@ def lexer(palabras, diccionario):
         if palabra in diccionario:
             tokens.append((palabra, diccionario[palabra]))
         else:
-            tokens.append((palabra, 'UNKNOWN'))
+            tokens.append((palabra, ""))
     return tokens
 
 #Una lista de palabras y un diccionario que asigna tokens a las palabras. 
