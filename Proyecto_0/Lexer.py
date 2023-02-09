@@ -55,11 +55,7 @@ DiccionarioTokens = {
     "[" : "COPEN",
     "]" : "CCLOSE",
     "{" : "KOPEN",
-    "}" : "KCLOSE"    
-
-
-
-
+    "}" : "KCLOSE"  
 
 }
 
