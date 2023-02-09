@@ -41,9 +41,16 @@ DiccionarioTokens = {
     #CMDIR = Comand moveInDir
     "jumpToThe" : "CJTT",
     #CJTT = Comand jumpTothe
-    "jumpInDir" : "CJDIR"
+    "jumpInDir" : "CJDIR",
     #CJDIR = Comand jumpInDir
-    
+    "if" : "IF",
+    "else" : "ELSE",
+    "elseif" : "ELSEIF",
+    "elif" : "ELSEIF",
+    "then" : "THEN",
+    "(" : "POPEN",
+    ")" : "PCLOSE",
+
     
 
 
