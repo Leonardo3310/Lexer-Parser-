@@ -1,3 +1,1 @@
-import numpy
-
-lexer = "vamos a hacerlo"
+"No vamos a usar librerias, gracias:)"
