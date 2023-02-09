@@ -2,4 +2,4 @@
 import Lexer as lex
 
 
-print 
+print(lex.leer_archivo(""))
