@@ -21,10 +21,8 @@ DiccionarioTokens = {
     #DP = Declaracion de procedimiento
     "WHILE" : "WHL",
     #WHL - Ciclo while
-    "assignTo" : "ASIGN"
-
-
-
+    "assignTo" : "ASSIGNTO"
+    
 
 
 
