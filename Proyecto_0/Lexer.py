@@ -52,6 +52,12 @@ DiccionarioTokens = {
 
 }
 
+def leer_archivo_to_str(file_path):
+    with open(file_path, 'r') as file:
+        text = file.read()
+    return text.lower()
+
+
 
 def leer_archivo(nombre_archivo):
     with open(nombre_archivo, 'r') as archivo:
