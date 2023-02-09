@@ -30,8 +30,18 @@ DiccionarioTokens = {
     "while" : "WHL",
     #WHILE = Ciclo while
     "face" : "CF",
-    #
-
+    #CF = Comand face
+    "put" : "CPUT",
+    #CPUT = Comand put
+    "pick" : "CPICK",
+    #CPICK = Comand pick
+    "moveToThe" : "CMTT",
+    #CMTT = Comand moveToThe
+    "moveInDir" : "CMDIR",
+    #CMDIR = Comand moveInDir
+    "jumpToThe" : "CJTT",
+    #CJTT = Comand jumpTothe
+    "jumpInDir" : "CJDIR"
     
     
     
