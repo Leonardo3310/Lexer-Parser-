@@ -17,9 +17,11 @@ DiccionarioTokens = {
     #PR = Programa Robot
     "VARS" : "V",
     #V = Variables
-    "PROCS" : "DP"
+    "PROCS" : "DP",
     #DP = Declaracion de procedimiento
-    
+    "WHILE" : "WHL",
+    #WHL - Ciclo while
+    "assignTo" : "ASIGN"
 
 
 
