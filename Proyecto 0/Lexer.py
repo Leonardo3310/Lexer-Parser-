@@ -19,11 +19,16 @@ DiccionarioTokens = {
     #V = Variables
     "PROCS" : "DP",
     #DP = Declaracion de procedimiento
-    "while" : "WHILE",
-    #WHL = Ciclo while
-    "assignTo" : "ASSIGNTO"
-    #assingTo = name donde name es el nombre de una variable y n es un número. 
-    # El resultado de esta instrucción es asignar el valor del número a la variable. 
+    "assignTo" : "CAT",
+    #CAT = Comand assignTo
+    "goto" : "CGT",
+    #CGT = Comand goTo
+    "move" : "CM",
+    #CM = Comand move
+    "turn" : "CT",
+    #CT = Comand turn
+    "WHILE" : "WHL",
+    
     
 
 
@@ -47,7 +52,7 @@ def lexer(palabras, diccionario):
         if palabra in diccionario:
             tokens.append((palabra, diccionario[palabra]))
         else:
-            tokens.append((palabra, 'UNKNOWN'))
+            tokens.append((palabra, ""))
     return tokens
 
 #Una lista de palabras y un diccionario que asigna tokens a las palabras. 
