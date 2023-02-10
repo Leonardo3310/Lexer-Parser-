@@ -61,16 +61,15 @@ def AuxParserBetweenKeys(tokens):
     index += 1
         
     if tokens[index] in ["CAT", "CGT", "CM", "CT",
-    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", ] and \
+    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", "IF", "ELSE","ELSEIF",
+    "THEN", "WHL"] and \
     index < len(tokens):
         index += 1
         if index < len(tokens) and tokens[index] != "DOSPUNTOS":
             return False
         index += 1
-        
+
     return True
-
-
  
 #mi plan es como si existe DP, llamar la funcion aux y guardar la posicion hasta el siguiente CCLOSE, 
 #para que se evalue recursivamente, y avanzar con la posicion 
