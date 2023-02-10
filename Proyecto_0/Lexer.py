@@ -59,7 +59,8 @@ DiccionarioTokens = {
     "=" : "EQ",
     "==": "COMPARE",
     "<=": "EQL",
-    ">=": "EQM"
+    ">=": "EQM",
+    "|" : "PALITO"
     
 }
 
