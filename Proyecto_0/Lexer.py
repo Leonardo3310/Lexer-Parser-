@@ -94,17 +94,31 @@ def lexer(text, tokens):
 
 print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
-def parser(tokens):
-  i = 0
-  if tokens[i] != "PR":
-    return False
-  i += 1
-  if i < len(tokens) and tokens[i] == "VAR":
+def parse(tokens_str):
+    tokens = tokens_str.split()
+    i = 0
+    if tokens[i] != "PR":
+        return "Error: First token must be 'PR'"
     i += 1
-    while i < len(tokens) and tokens[i] == "NAME":
-      i += 1
-      if i < len(tokens) and tokens[i] == "COMA":
+
+    if i < len(tokens) and tokens[i] == "VAR":
         i += 1
-      else:
-        break
-  return i == len(tokens)
+     
+        while i < len(tokens) and tokens[i] == "NAMES":
+            i += 1
+            if i < len(tokens) and tokens[i] == "COMA":
+                i += 1
+            else:
+                break
+    #procedure tokens
+    while i < len(tokens):
+        
+        if tokens[i] not in ["CAT", "CGT", "CM", "CT", "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR"]:
+            return f"Error: Unexpected token '{tokens[i]}'"
+        i += 1
+        
+        if i < len(tokens) and tokens[i] != "DOSPUNTOS":
+            return f"Error: Expected 'DOSPUNTOS' after procedure '{tokens[i-1]}'"
+        i += 1
+    
+    return "Success"
