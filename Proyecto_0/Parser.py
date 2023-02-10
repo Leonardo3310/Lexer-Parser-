@@ -56,7 +56,7 @@ def parse(tokens):
 
 def AuxParserBetweenKeys(tokens):
     print("a")
-    tokens = tokens.split
+    tokens = tokens.split()
     index = 0
 
     if tokens[index] != "PALITO":
@@ -68,13 +68,14 @@ def AuxParserBetweenKeys(tokens):
         if tokens[index] == "NAME" and index != len(tokens)-1:
             index += 1
             print("NOMBRE DP")
-            if index < len(tokens) and tokens[index] == "COMA":
-                index += 1
-            elif index == len(tokens):
-                break
+            if index < len(tokens) and tokens[index] != "COMA":
+                return False
+            index += 1
+            
         index += 1
+        print("x")
     #aqui tengo palito
-
+    print("f")
     index += 1
         
     if tokens[index] in ["CAT", "CGT", "CM", "CT",
@@ -82,9 +83,11 @@ def AuxParserBetweenKeys(tokens):
     "THEN", "WHL"] and \
     index < len(tokens):
         index += 1
+        print("q")
         if index < len(tokens) and tokens[index] != "DOSPUNTOS":
             return False
         index += 1
+        print("a")
 
     return True
  
