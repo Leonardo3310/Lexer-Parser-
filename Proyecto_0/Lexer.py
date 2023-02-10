@@ -91,3 +91,4 @@ def lexer(text, tokens):
             result.append(word)
     return ' '.join(result)
 
+print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
