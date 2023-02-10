@@ -122,3 +122,5 @@ def parse(tokens_str):
         i += 1
     
     return "Success"
+
+print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
