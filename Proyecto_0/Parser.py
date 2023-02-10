@@ -27,13 +27,14 @@ def parse(tokens):
         while tokens[index] != "CCLOSE":
             tokensEntreCOPENyCCLOSE += " " + tokens[index]
             index += 1
+
+        if AuxParserBetweenKeys(tokensEntreCOPENyCCLOSE) != True:
+            return False
         
-        ##if llamar a verificar dentro de []
 
     #aqui ya tengo el indice de CCLOSE
+    #insertar condigo aqui
 
-
-    #INSERTAR CODIGO AQUI
 
     if index != len(tokens):
         return False
@@ -71,34 +72,7 @@ def AuxParserBetweenKeys(tokens):
 
     return True
  
-#mi plan es como si existe DP, llamar la funcion aux y guardar la posicion hasta el siguiente CCLOSE, 
-#para que se evalue recursivamente, y avanzar con la posicion 
-
 #nota mental
 #entre palos puede no haber paramatros 
-#
-    
-    
-
-
-
-
-
-            
-    #procedimiento tokens de instruccion
-    #Agregar operadores logicos como instruccion y tambien while codigo
-    
-""" while i < len(tokens):
-        
-        if tokens[i] in ["CAT", "CGT", "CM", "CT", "CF", "CPUT",
-        "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR"]:
-            return f"Error: token '{tokens[i]}'"
-        i += 1
-        
-        if i < len(tokens) and tokens[i] != "DOSPUNTOS":
-            return f"Error: 'DOSPUNTOS' after '{tokens[i-1]}'"
-        i += 1
-    
-    return "Success"""
 
 #print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
