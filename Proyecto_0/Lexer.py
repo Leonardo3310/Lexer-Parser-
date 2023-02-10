@@ -1,13 +1,8 @@
 #Documentacion
 """Comentarios por desarrollar"""
 
-"""
-
-Completar dicionario: 
-formato:
-
+"""dicionario formato:
 PALABRA EN MINUSCULAS = TOKEN 
-
 """
 DiccionarioTokens = {
     "robot_r" : "PR",
