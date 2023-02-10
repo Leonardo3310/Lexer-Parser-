@@ -13,13 +13,13 @@ PALABRA EN MINUSCULAS = TOKEN
 
 """
 DiccionarioTokens = {
-    "ROBOT_R" : "PR",
+    "robot_r" : "PR",
     #PR = Programa Robot
-    "VARS" : "V",
+    "vars" : "V",
     #V = Variables
-    "PROCS" : "DP",
+    "procs" : "DP",
     #DP = Declaracion de procedimiento
-    "assignTo" : "CAT",
+    "assignto" : "CAT",
     #CAT = Comand assignTo
     "goto" : "CGT",
     #CGT = Comand goTo
@@ -35,13 +35,13 @@ DiccionarioTokens = {
     #CPUT = Comand put
     "pick" : "CPICK",
     #CPICK = Comand pick
-    "moveToThe" : "CMTT",
+    "movetothe" : "CMTT",
     #CMTT = Comand moveToThe
-    "moveInDir" : "CMDIR",
+    "moveindir" : "CMDIR",
     #CMDIR = Comand moveInDir
-    "jumpToThe" : "CJTT",
+    "jumptothe" : "CJTT",
     #CJTT = Comand jumpTothe
-    "jumpInDir" : "CJDIR",
+    "jumpindir" : "CJDIR",
     #CJDIR = Comand jumpInDir
     "if" : "IF",
     "else" : "ELSE",
