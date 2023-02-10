@@ -39,18 +39,6 @@ def parse(tokens):
         return False
     return True
 
-""" if tokens[index] == "DP":
-        index += 1
-        if tokens[index] != "NAMES":
-            return False
-        index += 1
-        if tokens[index] != "COPEN":
-            return False
-        parametros = verificationParamethersProceduredDefinition(tokens[index-1:])
-        if parametros[0]:
-            if auxNameComa(parametros[1]):
-                index += 1"""
-
  
 #mi plan es como si existe DP, llamar la funcion aux y guardar la posicion hasta el siguiente CCLOSE, 
 #para que se evalue recursivamente, y avanzar con la posicion 
@@ -59,13 +47,7 @@ def parse(tokens):
 #entre palos puede no haber paramatros 
 #
     
-    
-
-
-
-
-
-            
+   
     #procedimiento tokens de instruccion
     #Agregar operadores logicos como instruccion y tambien while codigo
     
