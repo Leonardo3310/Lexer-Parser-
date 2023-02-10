@@ -63,9 +63,12 @@ DiccionarioTokens = {
     "=" : "EQ",
     "==": "COMPARE",
     "<=": "EQL",
-    ">=": "EQM"
+    ">=": "EQM",
     #Tokens operadores logicos
-    
+    "*" : "MULTI",
+    "+" : "SUMA",
+    "-" : "RESTA",
+    "/" : "DIV"
 }
 
 #FUNCIONES AUXILIARES 
@@ -85,6 +88,10 @@ def read_file_and_format(file_path):
     text = text.replace("<=", ' <= ')
     text = text.replace(">=", ' >= ')
     text = text.replace("==", ' == ')
+    text = text.replace("+", ' + ')
+    text = text.replace("-", ' - ')
+    text = text.replace("*", ' * ')
+    text = text.replace("/", ' / ')
     
       
     return text
