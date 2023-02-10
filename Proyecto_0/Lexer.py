@@ -66,6 +66,7 @@ DiccionarioTokens = {
     "+" : "SUMA",
     "-" : "RESTA",
     "/" : "DIV"
+    #Tokens Operadores Aritmeticos
 }
 
 #FUNCIONES AUXILIARES 
