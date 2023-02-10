@@ -110,7 +110,7 @@ def parse(tokens_str):
                 i += 1
             else:
                 break
-    #procedure tokens
+    #procedimiento tokens
     while i < len(tokens):
         
         if tokens[i] not in ["CAT", "CGT", "CM", "CT", "CF", "CPUT",
