@@ -85,6 +85,7 @@ def modificar_str(text):
                     centinelaPequenio = True
                     posicion = i-1
             i += 1
+            
     return copyText
         
     
