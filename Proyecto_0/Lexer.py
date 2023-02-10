@@ -48,6 +48,7 @@ DiccionarioTokens = {
     "elseif" : "ELSEIF",
     "elif" : "ELSEIF",
     "then" : "THEN",
+    #Tokens Condicinales
     "(" : "POPEN",
     ")" : "PCLOSE",
     ":" : "DOSPUNTOS",
@@ -56,12 +57,14 @@ DiccionarioTokens = {
     "]" : "CCLOSE",
     "{" : "KOPEN",
     "}" : "KCLOSE",
+    "|" : "PALITO",
+    "," : "COMA",
+    #Tokens simbolos
     "=" : "EQ",
     "==": "COMPARE",
     "<=": "EQL",
-    ">=": "EQM",
-    "|" : "PALITO",
-    "," : "COMA"
+    ">=": "EQM"
+    #Tokens operadores logicos
     
 }
 
