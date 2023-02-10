@@ -97,26 +97,44 @@ def lexer(text, tokens):
 
 print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
-def parse(tokens_str):
-    tokens = tokens_str.split()
-    i = 0
-    if tokens[i] != "PR":
-        return "Error: First token must be 'PR'"
-    i += 1
+def parse(tokens):
+    tokens = tokens.split()
+    index = 0
+    if tokens[index] != "PR":
+        return False
+    index += 1
+    if tokens[index] == "V":
+        index += 1
+        while tokens[index] != "PYC":
+            if tokens[index] != "NAMES":
+                return False
+            index += 1
+            if tokens[index] == "COMA":
+                index += 1
+    if tokens[index] == "DP":
+        index += 1
+        if tokens[index] != "NAMES":
+            return False
+        index += 1
+        if tokens[index] != "COPEN":
+            return False
+        index += 1
+        balance = 1
+        while balance != 0:
+            if tokens[index] == "COPEN":
+                balance += 1
+            elif tokens[index] == "CCLOSE":
+                balance -= 1
+            index += 1
+    if index != len(tokens):
+        return False
+    return True
 
-    if i < len(tokens) and tokens[i] == "V":
-        i += 1
-     
-        while i < len(tokens) and tokens[i] == "NAME":
-            i += 1
-            if i < len(tokens) and tokens[i] == "COMA":
-                i += 1
-            else:
-                break
+            
     #procedimiento tokens
-    while i < len(tokens):
+""" while i < len(tokens):
         
-        if tokens[i] not in ["CAT", "CGT", "CM", "CT", "CF", "CPUT",
+        if tokens[i] in ["CAT", "CGT", "CM", "CT", "CF", "CPUT",
         "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR"]:
             return f"Error: token '{tokens[i]}'"
         i += 1
@@ -125,6 +143,6 @@ def parse(tokens_str):
             return f"Error: 'DOSPUNTOS' after '{tokens[i-1]}'"
         i += 1
     
-    return "Success"
+    return "Success"""
 
 print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
