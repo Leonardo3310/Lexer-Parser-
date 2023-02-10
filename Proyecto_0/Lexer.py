@@ -70,10 +70,26 @@ def leer_archivo_to_str(file_path):
     return text.lower()
 
 def modificar_str(text):
-    copytext = text
-    for i in range(0,len(text)-1):
-        if text[i] == "[" or text[i] == "]":
-            insert_char_at_index(text,)
+    copyText = text
+    centinelaPequenio = False 
+    centinelaGrande = False
+    posicion = 0
+    
+    while centinelaGrande == False and posicion <= len(copyText)-1:
+        i = posicion
+        while centinelaPequenio == False and posicion <= len(copyText)-1:
+            if copyText[i] == "[" or copyText[i] == "]":
+                if i != len(copyText)-1 and i != 0:
+                    insert_char_at_index(copyText, " ",i-1)
+                    insert_char_at_index(copyText, " ",i+1)
+                    centinelaPequenio = True
+                    posicion = i-1
+            i += 1
+    return copyText
+        
+    
+            
+
             
     
 
