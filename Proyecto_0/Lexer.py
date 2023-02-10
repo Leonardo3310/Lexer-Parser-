@@ -86,7 +86,7 @@ def read_file_and_format(file_path):
     text = text.replace("-", ' - ')
     text = text.replace("*", ' * ')
     text = text.replace("/", ' / ')
-    
+    text = text.replace("%", ' % ')
       
     return text
         
