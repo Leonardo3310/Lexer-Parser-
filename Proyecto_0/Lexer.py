@@ -70,7 +70,7 @@ DiccionarioTokens = {
 def read_file_and_format(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
-    text = text.upper()
+    text = text.lower()
     text = text.replace('(', ' ( ')
     text = text.replace(')', ' ) ')
     text = text.replace('[', ' [ ')
@@ -101,10 +101,10 @@ def parse(tokens_str):
         return "Error: First token must be 'PR'"
     i += 1
 
-    if i < len(tokens) and tokens[i] == "VAR":
+    if i < len(tokens) and tokens[i] == "V":
         i += 1
      
-        while i < len(tokens) and tokens[i] == "NAMES":
+        while i < len(tokens) and tokens[i] == "WORD":
             i += 1
             if i < len(tokens) and tokens[i] == "COMA":
                 i += 1
@@ -114,11 +114,11 @@ def parse(tokens_str):
     while i < len(tokens):
         
         if tokens[i] not in ["CAT", "CGT", "CM", "CT", "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR"]:
-            return f"Error: Unexpected token '{tokens[i]}'"
+            return f"Error: token '{tokens[i]}'"
         i += 1
         
         if i < len(tokens) and tokens[i] != "DOSPUNTOS":
-            return f"Error: Expected 'DOSPUNTOS' after procedure '{tokens[i-1]}'"
+            return f"Error: 'DOSPUNTOS' after '{tokens[i-1]}'"
         i += 1
     
     return "Success"
