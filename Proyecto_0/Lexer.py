@@ -55,8 +55,12 @@ DiccionarioTokens = {
     "[" : "COPEN",
     "]" : "CCLOSE",
     "{" : "KOPEN",
-    "}" : "KCLOSE"  
-
+    "}" : "KCLOSE",
+    "=" : "EQ",
+    "==": "COMPARE",
+    "<=": "EQL",
+    ">=": "EQM"
+    
 }
 
 #FUNCIONES AUXILIARES 
@@ -109,3 +113,4 @@ def lexer(palabras, diccionario):
 
 print(open("./Proyecto_0/prueba_archivo.txt").read())
 
+#print(lexer(modificar_str(leer_archivo_to_str("./Proyecto_0/prueba_archivo.txt"))), DiccionarioTokens)
