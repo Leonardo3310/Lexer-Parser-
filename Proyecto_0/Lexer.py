@@ -48,6 +48,7 @@ DiccionarioTokens = {
     "elseif" : "ELSEIF",
     "elif" : "ELSEIF",
     "then" : "THEN",
+    #Tokens Condicinales
     "(" : "POPEN",
     ")" : "PCLOSE",
     ":" : "DOSPUNTOS",
@@ -56,13 +57,18 @@ DiccionarioTokens = {
     "]" : "CCLOSE",
     "{" : "KOPEN",
     "}" : "KCLOSE",
+    "|" : "PALITO",
+    "," : "COMA",
+    #Tokens simbolos
     "=" : "EQ",
     "==": "COMPARE",
     "<=": "EQL",
     ">=": "EQM",
-    "|" : "PALITO",
-    "," : "COMA"
-    
+    #Tokens operadores logicos
+    "*" : "MULTI",
+    "+" : "SUMA",
+    "-" : "RESTA",
+    "/" : "DIV"
 }
 
 #FUNCIONES AUXILIARES 
@@ -78,7 +84,16 @@ def read_file_and_format(file_path):
     text = text.replace(':', ' : ')
     text = text.replace(';', ' ; ')
     text = text.replace("|", ' | ')
+    text = text.replace("=", ' = ')
+    text = text.replace("<=", ' <= ')
+    text = text.replace(">=", ' >= ')
+    text = text.replace("==", ' == ')
+    text = text.replace("+", ' + ')
+    text = text.replace("-", ' - ')
+    text = text.replace("*", ' * ')
+    text = text.replace("/", ' / ')
     
+      
     return text
         
 def lexer(text, tokens):
