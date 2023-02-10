@@ -17,16 +17,21 @@ def parse(tokens):
             if tokens[index] != "NAME":
                 return False
             index += 1
-            if tokens[index] == "COMA":
+            if tokens[index] == "COMA" :
                 index += 1
-            elif tokens[index] == "NAME" and tokens[index+1] == "PYC":
+            elif tokens[index] == "NAME":
                 index += 1
-                break
-            else:
-                return False
+            
     index += 1
                 
     if tokens[index] == "DP":
+        print("C")
+        index += 1
+        if tokens[index] != "NAME":
+            return False
+        index += 1
+        print("b")
+
         if tokens[index] != "COPEN":
                 return False
         index += 1
@@ -38,6 +43,7 @@ def parse(tokens):
 
         if AuxParserBetweenKeys(tokensEntreCOPENyCCLOSE) != True:
             return False
+
         
 
     #aqui ya tengo el indice de CCLOSE
