@@ -39,6 +39,38 @@ def parse(tokens):
         return False
     return True
 
+def AuxParserBetweenKeys(tokens):
+    tokens = tokens.split
+    index = 0
+
+    if tokens[index] != "PALITO":
+        return False
+
+    index += 1
+
+    while index < len(tokens) and tokens[index] != "PALITO":
+        if tokens[index] == "NOMBRE" and index != len(tokens)-1:
+            index += 1
+            if index < len(tokens) and tokens[index] == "COMA":
+                index += 1
+            elif index == len(tokens):
+                break
+        index += 1
+    #aqui tengo palito
+
+    index += 1
+        
+    if tokens[index] in ["CAT", "CGT", "CM", "CT",
+    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", ] and \
+    index < len(tokens):
+        index += 1
+        if index < len(tokens) and tokens[index] != "DOSPUNTOS":
+            return False
+        index += 1
+        
+    return True
+
+
  
 #mi plan es como si existe DP, llamar la funcion aux y guardar la posicion hasta el siguiente CCLOSE, 
 #para que se evalue recursivamente, y avanzar con la posicion 
@@ -47,7 +79,13 @@ def parse(tokens):
 #entre palos puede no haber paramatros 
 #
     
-   
+    
+
+
+
+
+
+            
     #procedimiento tokens de instruccion
     #Agregar operadores logicos como instruccion y tambien while codigo
     
