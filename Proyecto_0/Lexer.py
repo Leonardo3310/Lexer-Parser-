@@ -100,7 +100,7 @@ def lexer(text, tokens):
         elif word.isalnum() and word[0].isalpha():
             result += "NAME "
         elif word in "0123456789":
-            result += "INT "
+            result += "INT(" + word + ") "
         else:
             result += "WORD "
     return result
