@@ -18,6 +18,20 @@ def parse(tokens):
             index += 1
             if tokens[index] == "COMA":
                 index += 1
+    if tokens[index] == "DP":
+        if tokens[index] != "COPEN":
+                return False
+        index += 1
+        tokensEntreCOPENyCCLOSE = ""
+        #posicion del COPEN
+        while tokens[index] != "CCLOSE":
+            tokensEntreCOPENyCCLOSE += " " + tokens[index]
+            index += 1
+        
+        ##if llamar a verificar dentro de []
+
+    #aqui ya tengo el indice de CCLOSE
+
 
     #INSERTAR CODIGO AQUI
 
@@ -25,7 +39,7 @@ def parse(tokens):
         return False
     return True
 
-"""if tokens[index] == "DP":
+""" if tokens[index] == "DP":
         index += 1
         if tokens[index] != "NAMES":
             return False
@@ -36,6 +50,8 @@ def parse(tokens):
         if parametros[0]:
             if auxNameComa(parametros[1]):
                 index += 1"""
+
+ 
 #mi plan es como si existe DP, llamar la funcion aux y guardar la posicion hasta el siguiente CCLOSE, 
 #para que se evalue recursivamente, y avanzar con la posicion 
 
