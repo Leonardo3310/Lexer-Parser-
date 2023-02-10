@@ -110,5 +110,4 @@ def lexer(text, tokens):
             result += "WORD "
     return result
 
-print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
