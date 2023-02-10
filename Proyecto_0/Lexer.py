@@ -52,10 +52,24 @@ DiccionarioTokens = {
 
 }
 
+#FUNCIONES AUXILIARES 
+
+def insert_char_at_index(string, char, index):
+    return string[:index] + char + string[index:]
+
 def leer_archivo_to_str(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
     return text.lower()
+
+def modificar_str(text):
+    copytext = text
+    for i in range(0,len(text)-1):
+        if text[i] == "[" or text[i] == "]":
+            insert_char_at_index(text,)
+            
+    
+
 
 
 
