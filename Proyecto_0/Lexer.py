@@ -60,7 +60,8 @@ DiccionarioTokens = {
     "==": "COMPARE",
     "<=": "EQL",
     ">=": "EQM",
-    "|" : "PALITO"
+    "|" : "PALITO",
+    "," : "COMA"
     
 }
 
@@ -69,7 +70,7 @@ DiccionarioTokens = {
 def read_file_and_format(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
-    text = text.lower()
+    text = text.upper()
     text = text.replace('(', ' ( ')
     text = text.replace(')', ' ) ')
     text = text.replace('[', ' [ ')
@@ -88,7 +89,22 @@ def lexer(text, tokens):
         if word in tokens:
             result.append(tokens[word])
         else:
-            result.append(word)
+            result.append("WORD")
     return ' '.join(result)
 
 print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
+
+def parser(tokens):
+  i = 0
+  if tokens[i] != "PR":
+    return False
+  i += 1
+  if i < len(tokens) and tokens[i] == "VAR":
+    i += 1
+    while i < len(tokens) and tokens[i] == "NAME":
+      i += 1
+      if i < len(tokens) and tokens[i] == "COMA":
+        i += 1
+      else:
+        break
+  return i == len(tokens)
