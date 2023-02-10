@@ -61,32 +61,18 @@ DiccionarioTokens = {
 
 #FUNCIONES AUXILIARES 
 
-def insert_char_at_index(string, char, index):
-    return string[:index] + char + string[index:]
-
-def leer_archivo_to_str(file_path):
+def read_file_and_format(file_path):
     with open(file_path, 'r') as file:
         text = file.read()
-    return text.lower()
-
-def modificar_str(text):
-    copyText = text
-    centinelaPequenio = False 
-    centinelaGrande = False
-    posicion = 0
+    text = text.lower()
+    text = text.replace('(', ' ( ')
+    text = text.replace(')', ' ) ')
+    text = text.replace('[', ' [ ')
+    text = text.replace(']', ' ] ')
+    text = text.replace(':', ' : ')
+    text = text.replace("|", ' | ')
     
-    while centinelaGrande == False and posicion <= len(copyText)-1:
-        i = posicion
-        while centinelaPequenio == False and posicion <= len(copyText)-1:
-            if copyText[i] == "[" or copyText[i] == "]":
-                if i != len(copyText)-1 and i != 0:
-                    insert_char_at_index(copyText, " ",i-1)
-                    insert_char_at_index(copyText, " ",i+1)
-                    centinelaPequenio = True
-                    posicion = i-1
-            i += 1
-            
-    return copyText
+    return text
         
     
             
