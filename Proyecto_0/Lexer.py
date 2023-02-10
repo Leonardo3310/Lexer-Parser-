@@ -1,6 +1,3 @@
-"""No vamos a usar librerias, gracias:"""
-"""q cabron"""
-
 #Documentacion
 """Comentarios por desarrollar"""
 
