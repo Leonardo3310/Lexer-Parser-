@@ -1,5 +1,7 @@
 #CONSOLA
 import Lexer as lex
+import Parser as p
+
 DiccionarioTokens = {
     "robot_r" : "PR",
     #PR = Programa Robot
@@ -63,7 +65,7 @@ DiccionarioTokens = {
 
 print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
 print(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
-
+print(p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
 
 
 
