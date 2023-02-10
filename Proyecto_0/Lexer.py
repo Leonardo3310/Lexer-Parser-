@@ -69,6 +69,7 @@ DiccionarioTokens = {
     "+" : "SUMA",
     "-" : "RESTA",
     "/" : "DIV"
+    #Tokens Operadores Aritmeticos
 }
 
 #FUNCIONES AUXILIARES 
@@ -123,7 +124,7 @@ def parse(tokens_str):
         i += 1
      
         while i < len(tokens) and tokens[i] == "NAME":
-            i += 1
+            #i += 1
             if i < len(tokens) and tokens[i] == "COMA":
                 i += 1
             else:
