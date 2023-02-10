@@ -55,8 +55,12 @@ DiccionarioTokens = {
     "[" : "COPEN",
     "]" : "CCLOSE",
     "{" : "KOPEN",
-    "}" : "KCLOSE"  
-
+    "}" : "KCLOSE",
+    "=" : "EQ",
+    "==": "COMPARE",
+    "<=": "EQL",
+    ">=": "EQM"
+    
 }
 
 #FUNCIONES AUXILIARES 
