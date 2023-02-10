@@ -56,7 +56,8 @@ DiccionarioTokens = {
     "*" : "MULTI",
     "+" : "SUMA",
     "-" : "RESTA",
-    "/" : "DIV"
+    "/" : "DIV",
+    "%" : "MOD"
     #Tokens Operadores Aritmeticos
 }
 
