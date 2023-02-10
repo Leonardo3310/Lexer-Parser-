@@ -82,15 +82,18 @@ def read_file_and_format(file_path):
     return text
         
 def lexer(text, tokens):
-
+ 
     words = text.split()
-    result = []
+    result = ""
+  
     for word in words:
         if word in tokens:
-            result.append(tokens[word])
+            result += tokens[word] + " "
+        elif word.isalnum() and word[0].isalpha():
+            result += "NAME "
         else:
-            result.append("WORD")
-    return ' '.join(result)
+            result += "WORD "
+    return result
 
 print(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
@@ -104,7 +107,7 @@ def parse(tokens_str):
     if i < len(tokens) and tokens[i] == "V":
         i += 1
      
-        while i < len(tokens) and tokens[i] == "WORD":
+        while i < len(tokens) and tokens[i] == "NAME":
             i += 1
             if i < len(tokens) and tokens[i] == "COMA":
                 i += 1
