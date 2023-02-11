@@ -1,8 +1,3 @@
-"""Parser"""
-
-
-
-
 
 def parse(tokens):
     tokens = tokens.split()
