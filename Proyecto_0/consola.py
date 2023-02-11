@@ -114,7 +114,7 @@ while True:
 
         print(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
-    if int(inputs[0]) == 4:
+    elif int(inputs[0]) == 4:
 
         file = input("Coloque el nombre del archivo. (Debe estar en la carpeta del proyecto). ")
 
