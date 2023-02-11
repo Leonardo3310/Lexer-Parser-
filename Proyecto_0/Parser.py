@@ -47,12 +47,14 @@ def parse(tokens):
     index < len(tokens):
             index += 1
             print("q")
-                if tokens[index] == "NAME":
+
+        if tokens[index] == "NAME":
             pass
-    """if index < len(tokens) and tokens[index] != "DOSPUNTOS":
+  
+        index += 1
+        print("a")
+        """if index < len(tokens) and tokens[index] != "DOSPUNTOS":
                 return False"""
-            index += 1
-            print("a")
  
 
     return True
