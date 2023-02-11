@@ -33,6 +33,15 @@ DiccionarioTokens = {
     #CJTT = Comand jumpTothe
     "jumpindir" : "CJDIR",
     #CJDIR = Comand jumpInDir
+    "facing" : "FACE",
+    "canput" : "CNPUT",
+    "canpick" : "CNPCK",
+    "canmoveindir" : "CMIDIR",
+    "canjumpindir" : "CJIDIR",
+    "canmovetothe" : "CMTT",
+    "canjumptothe" : "CJTT",
+    "not" : "NOT",
+    #Especial Conditions
     "if" : "IF",
     "else" : "ELSE",
     "elseif" : "ELSEIF",
