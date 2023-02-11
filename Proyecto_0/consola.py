@@ -132,7 +132,7 @@ while True:
 
         print("El resultador del parser es ", p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))) 
 
-    elif int(inputs[0]) == 4:
+    elif int(inputs[0]) == 5:
 
         print("--------------------------------------------------------------------")
 
