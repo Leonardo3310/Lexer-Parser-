@@ -102,12 +102,12 @@ while True:
 
         print("El resultador del parser es ", p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
 
-    if int(inputs[0]) == 2:
+    elif int(inputs[0]) == 2:
         print("Mostrando Codigo Original")
 
         print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
 
-    if int(inputs[0]) == 3:
+    elif int(inputs[0]) == 3:
 
         print("Mostrando Tokens")
 
