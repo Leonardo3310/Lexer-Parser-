@@ -41,11 +41,13 @@ def parse(tokens):
     
 
         
-
+    
     #aqui ya tengo el indice de CCLOSE
     #insertar condigo aqui
-    if index != len(tokens)-1:
-        return False
+        if tokens[index] == "NAME":
+            pass
+    """if index != len(tokens)-1:
+        return False"""
 
 
     return True
