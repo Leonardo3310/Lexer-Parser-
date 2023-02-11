@@ -87,7 +87,7 @@ def print_menu():
 
 while True:
     print_menu()
-    inputs = "Seleccione una opcion"
+    inputs = input("Seleccione una opcion")
     if int(inputs[0]) == 1:
         print("Mostrando Codigo Original")
 
@@ -101,4 +101,3 @@ while True:
 
     else:
         sys.exit(0)
-sys.exit(0)
