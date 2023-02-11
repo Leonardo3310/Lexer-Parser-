@@ -79,3 +79,6 @@ print(p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.tx
 
 
 
+def print_menu():
+    print("Bienvenido a nuestro lexer y parser")
+    print("Seleccione alguna de las siguientes opciones")
