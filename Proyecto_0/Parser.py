@@ -116,6 +116,3 @@ def AuxAfter(tokens):
         i += 1
     return False
 
-   
-
-#print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
