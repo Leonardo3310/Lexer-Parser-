@@ -1,6 +1,7 @@
 #CONSOLA
 import Lexer as lex
 import Parser as p
+import sys
 
 DiccionarioTokens = {
     "robot_r" : "PR",
@@ -72,10 +73,31 @@ DiccionarioTokens = {
     #Tokens Operadores Aritmeticos
 }
 
-print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
-print(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
-print(p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
 
 
 
 
+
+def print_menu():
+    print("--------------------------------------------------------------------")
+    print("Bienvenido a nuestro lexer y parser")
+    print("Seleccione alguna de las siguientes opciones")
+    print("1. Iniciar Programa")
+    print("9. Salir")
+
+while True:
+    print_menu()
+    inputs = input("Seleccione una opcion: ")
+    if int(inputs[0]) == 1:
+        print("Mostrando Codigo Original")
+
+        print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
+
+        print("Mostrando Tokens")
+
+        print(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
+
+        print("El resultador del parser es ", p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
+
+    else:
+        sys.exit(0)
