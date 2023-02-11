@@ -42,13 +42,15 @@ def parse(tokens):
         index+=1
 
         if tokens[index] in ["CAT", "CGT", "CM", "CT",
-    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", "IF", "ELSE","ELSEIF",
+    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", "IF", "ELSE","ELSEIF",    
     "THEN", "WHL"] and \
     index < len(tokens):
             index += 1
             print("q")
-            if index < len(tokens) and tokens[index] != "DOSPUNTOS":
-                return False
+                if tokens[index] == "NAME":
+            pass
+    """if index < len(tokens) and tokens[index] != "DOSPUNTOS":
+                return False"""
             index += 1
             print("a")
  
