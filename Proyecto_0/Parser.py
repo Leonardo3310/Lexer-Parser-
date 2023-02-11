@@ -22,13 +22,14 @@ def parse(tokens):
     if tokens[index] == "DP":
         print("C")
         index += 1
+        
         if tokens[index] != "NAME":
             return False
         index += 1
         print("b")
 
         if tokens[index] != "COPEN":
-                return False
+            return False
         index += 1
         tokensEntreCOPENyCCLOSE = ""
         #posicion del COPEN
@@ -38,17 +39,27 @@ def parse(tokens):
 
         if AuxParserBetweenKeys(tokensEntreCOPENyCCLOSE) != True:
             return False
-    
+        index+=1
 
-        
-
-    #aqui ya tengo el indice de CCLOSE
-    #insertar condigo aqui
-    if index != len(tokens)-1:
-        return False
-
+        if tokens[index] in ["CAT", "CGT", "CM", "CT",
+    "CF", "CPUT", "CPICK", "CMTT", "CMDIR", "CJTT", "CJDIR", "IF", "ELSE","ELSEIF",
+    "THEN", "WHL"] and \
+    index < len(tokens):
+            index += 1
+            print("q")
+            if index < len(tokens) and tokens[index] != "DOSPUNTOS":
+                return False
+            index += 1
+            print("a")
+ 
 
     return True
+
+        # #aqui ya tengo el indice de CCLOSE
+        # #insertar condigo aqui
+        # if index != len(tokens)-1:
+        # return False
+
 
 def AuxParserBetweenKeys(tokens):
     print("a")
@@ -86,6 +97,7 @@ def AuxParserBetweenKeys(tokens):
         print("a")
 
     return True
- 
+
+   
 
 #print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
