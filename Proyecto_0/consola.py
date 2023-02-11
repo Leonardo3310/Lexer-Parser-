@@ -82,6 +82,7 @@ def print_menu():
     print("--------------------------------------------------------------------")
     print("Bienvenido a nuestro lexer y parser")
     print("Seleccione alguna de las siguientes opciones:")
+    print("Las 4 primeras opciones son bajo el codigo ejemplo. Para otro archivo de texto, use opcion 5. ")
     print("1. Iniciar Programa")
     print("2. Mostrar codigo original")
     print("3. Mostrar Tokens")
