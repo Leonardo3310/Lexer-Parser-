@@ -85,7 +85,8 @@ def print_menu():
     print("1. Iniciar Programa")
     print("2. Mostrar codigo original")
     print("3. Mostrar Tokens")
-    print("4. Programa con diferente archivo")
+    print("4. Motrar resultado del parser")
+    print("5. Programa con diferente archivo")
     print("9. Salir")
 
 while True:
@@ -93,6 +94,9 @@ while True:
     inputs = input("Seleccione una opcion: ")
 
     if int(inputs[0]) == 1:
+
+        print("--------------------------------------------------------------------")
+
         print("Mostrando Codigo Original")
 
         print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
@@ -104,17 +108,32 @@ while True:
         print("El resultador del parser es ", p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
 
     elif int(inputs[0]) == 2:
+
+        print("--------------------------------------------------------------------")
+
         print("Mostrando Codigo Original")
 
         print(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"))
 
     elif int(inputs[0]) == 3:
 
+        print("--------------------------------------------------------------------")
+
         print("Mostrando Tokens")
 
         print(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))
 
     elif int(inputs[0]) == 4:
+
+        print("--------------------------------------------------------------------")
+
+        print("Mostrando Resultado Parser")
+
+        print("El resultador del parser es ", p.parse(lex.lexer(lex.read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens))) 
+
+    elif int(inputs[0]) == 4:
+
+        print("--------------------------------------------------------------------")
 
         file = input("Coloque el nombre del archivo. (Debe estar en la carpeta del proyecto). ")
 
