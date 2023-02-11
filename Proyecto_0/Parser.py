@@ -21,8 +21,6 @@ def parse(tokens):
 
             elif tokens[index] == "NAME":
                 index += 1
-            
-    index += 1
                 
     if tokens[index] == "DP":
         index += 1
