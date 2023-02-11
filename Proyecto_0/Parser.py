@@ -43,6 +43,7 @@ def parse(tokens):
 
         if AuxParserBetweenKeys(tokensEntreCOPENyCCLOSE) != True:
             return False
+    
 
         
 
@@ -91,7 +92,5 @@ def AuxParserBetweenKeys(tokens):
 
     return True
  
-#nota mental
-#entre palos puede no haber paramatros 
 
 #print(parse(lexer(read_file_and_format("./Proyecto_0/prueba_archivo.txt"),DiccionarioTokens)))
