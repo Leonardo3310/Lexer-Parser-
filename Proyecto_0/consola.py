@@ -86,7 +86,7 @@ def print_menu():
     print("1. Iniciar Programa")
     print("2. Mostrar codigo original")
     print("3. Mostrar Tokens")
-    print("4. Motrar resultado del parser")
+    print("4. Mostrar resultado del parser")
     print("5. Programa con diferente archivo")
     print("9. Salir")
 
